@@ -1,0 +1,3 @@
+# The 0 in the filename will cause this file to be loaded first
+# Include paths for MacPorts
+export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH

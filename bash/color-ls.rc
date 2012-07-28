@@ -1,0 +1,20 @@
+if ls --color -d . >/dev/null 2>&1; then
+  GNU_LS=1
+elif ls -G -d . >/dev/null 2>&1; then
+  BSD_LS=1
+else
+  SOLARIS_LS=1
+fi
+
+# don't adjust colors for dumb terminals
+if [ "$TERM" != "dumb" ]; then
+ if [ GNU_LS  ]; then
+   alias ls='ls --color=auto'
+   eval `dircolors ~/.dircolors`
+ else
+   # e.g. OS X
+   alias ls='ls -G'
+   export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+ fi
+ export CLICOLOR=1
+fi
