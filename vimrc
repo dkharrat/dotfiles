@@ -18,10 +18,16 @@ set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
+   " turn off vim's handling of regex in searches
+nnoremap / /\v
+vnoremap / /\v
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
+set gdefault                    " apply substitutions globally on lines
+    " shortcut to clear search
+nnoremap <leader><space> :noh<cr>
 
 ""List chars
 set listchars=""                  " Reset the listchars
