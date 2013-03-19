@@ -57,3 +57,10 @@ if has("statusline") && !&cp
   set statusline+=\ %P            " percent through file
 endif
 
+"" ignore generated and binary files in auto-completion
+set wildignore+=*.so,*.class,*.o,*.jar,*.swp,*.zip
+
+"" search from root of project
+let g:ctrlp_working_path_mode = 'ra'
+" Let ctrlp search based on git index, honoring gitignore files
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
