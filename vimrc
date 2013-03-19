@@ -17,6 +17,9 @@ set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
+"" Leader key
+let mapleader = ","
+
 "" Searching
    " turn off vim's handling of regex in searches
 nnoremap / /\v
