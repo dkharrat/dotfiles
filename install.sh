@@ -26,3 +26,5 @@ for file in $files; do
   [[ -e ~/.$file ]] && mv ~/.$file ~/dotfiles_old/
   ln -s $dir/$file ~/.$file
 done
+
+git submodule update --init
