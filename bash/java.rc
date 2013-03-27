@@ -1,0 +1,11 @@
+case $OSTYPE in
+  darwin*)
+    export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+    ;;
+  linux*)
+    export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+    ;;
+  *)
+    echo "WARN: Could not export $JAVA_HOME; unknown OS ($OSTYPE)"
+    ;;
+esac
