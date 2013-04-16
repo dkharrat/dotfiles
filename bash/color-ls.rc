@@ -1,5 +1,12 @@
+LS_CMD="ls"
+DIR_COLORS="dircolors"
+
 if ls --color -d . >/dev/null 2>&1; then
   GNU_LS=1
+elif gls . >/dev/null 2>&1; then
+  GNU_LS=1
+  LS_CMD="gls"
+  DIR_COLORS="gdircolors"
 elif ls -G -d . >/dev/null 2>&1; then
   BSD_LS=1
 else
@@ -8,13 +15,13 @@ fi
 
 # don't adjust colors for dumb terminals
 if [ "$TERM" != "dumb" ]; then
- if [ GNU_LS  ]; then
-   alias ls='ls --color=auto'
-   eval `dircolors ~/.dircolors`
+ if [[ $GNU_LS == 1 ]]; then
+   alias ls="$LS_CMD --color=auto"
+   eval `$DIR_COLORS ~/.dircolors`
  else
    # e.g. OS X
-   alias ls='ls -G'
-   export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+   alias ls="$LS_CMD -G"
+   export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
  fi
  export CLICOLOR=1
 fi
