@@ -6,6 +6,6 @@ case $OSTYPE in
     export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
     ;;
   *)
-    echo "WARN: Could not export $JAVA_HOME; unknown OS ($OSTYPE)"
+    echo "WARN: Could not export \$JAVA_HOME; unknown OS ($OSTYPE)"
     ;;
 esac
