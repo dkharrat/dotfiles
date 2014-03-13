@@ -1,3 +1,3 @@
 # The 0 in the filename will cause this file to be loaded first
 
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
