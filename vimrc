@@ -64,3 +64,8 @@ set wildignore+=*.so,*.class,*.o,*.jar,*.swp,*.zip
 let g:ctrlp_working_path_mode = 'ra'
 " Let ctrlp search based on git index, honoring gitignore files
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
+
+"" configure lightline plugin
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
