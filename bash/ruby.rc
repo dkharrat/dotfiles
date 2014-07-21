@@ -1,11 +1,3 @@
-if [[ -d ~/.rvm/ ]] && [[ -d ~/.rbenv/ ]]; then
-  echo "WARNING: both rbenv and rvm detected. Having both may cause conflicts with rubies/gems."
-fi
-
-if [[ -d ~/.rvm/ ]]; then
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-fi
-
 if [[ -d ~/.rbenv/ ]]; then
   eval "$(rbenv init -)"
 fi
