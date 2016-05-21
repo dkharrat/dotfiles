@@ -6,7 +6,7 @@ syntax enable
 colorscheme solarized
 set background=dark
 set t_Co=256
-set encoding=utf-8
+set encoding=utf-8              " use utf-8 for internally
 set ruler
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
