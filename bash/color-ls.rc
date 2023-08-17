@@ -16,6 +16,9 @@ fi
 # don't adjust colors for dumb terminals
 if [ "$TERM" != "dumb" ]; then
  if [[ $GNU_LS == 1 ]]; then
+   if [ -x /usr/bin/dircolors ]; then
+     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+   fi
    alias ls="$LS_CMD --color=auto"
  else
    # e.g. OS X
