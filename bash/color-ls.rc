@@ -17,7 +17,6 @@ fi
 if [ "$TERM" != "dumb" ]; then
  if [[ $GNU_LS == 1 ]]; then
    alias ls="$LS_CMD --color=auto"
-   eval `$DIR_COLORS ~/.dircolors`
  else
    # e.g. OS X
    alias ls="$LS_CMD -G"
