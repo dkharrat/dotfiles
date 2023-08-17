@@ -3,7 +3,6 @@ call pathogen#infect()
 
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable
-colorscheme solarized
 set background=dark
 set t_Co=256
 set encoding=utf-8              " use utf-8 for internally
@@ -65,7 +64,3 @@ let g:ctrlp_working_path_mode = 'ra'
 " Let ctrlp search based on git index, honoring gitignore files
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 
-"" configure lightline plugin
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
