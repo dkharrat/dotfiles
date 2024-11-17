@@ -1,6 +1,6 @@
 # The 0 in the filename will cause this file to be loaded first
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # if rbenv is installed in the home directory, update PATH
 if [[ -d ~/.rbenv/bin ]]; then
